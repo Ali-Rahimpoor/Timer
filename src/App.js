@@ -1,9 +1,11 @@
 import Stopwatch from "./AiTimer";
 import Timer from "./components/Timer";
+import Clock from "./components/Date"
 function App() {
   return (
-    <div className="flex items-center justify-center mt-20">
+    <div>
       <Timer/>
+      <Clock/>
     </div>
   );
 }
