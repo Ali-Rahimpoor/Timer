@@ -49,7 +49,7 @@ const CountTimer = ()=>{
       setIsRunning(false);
    }
    return(
-      <div className="text-center bg-gray-800 w-[400px] mx-auto rounded text-white p-5">
+      <div className="text-center bg-gray-800 w-full sm:w-[500px] mx-auto sm:rounded text-white p-5">
         <h1 className="text-2xl mb-5"> CountDown Timer </h1>
         <input type="number" 
         className="bg-gray-100 text-black pl-3 p-1 text-xl inline w-[100px] rounded-lg"
