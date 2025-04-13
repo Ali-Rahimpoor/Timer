@@ -35,7 +35,7 @@ const Timer = ()=>{
       };
       
     return(
-        <div className="text-center font-mono w-[400px] mx-auto bg-slate-800 text-white shadow-xl rounded pb-5 pt-1 px-5 ">
+        <div className="text-center font-mono w-[400px] mx-auto bg-slate-800 text-white shadow-xl rounded pb-5 pt-1 px-5 my-2 ">
             <CiTimer className="mx-auto size-8" />
             <h1 className="font-sans text-4xl mb-2 " >Timer</h1>
             <h1 className="text-lg" >Time: {formatTime(time)}</h1>

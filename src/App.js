@@ -1,11 +1,13 @@
 import Stopwatch from "./AiTimer";
 import Timer from "./components/Timer";
-import Clock from "./components/Date"
+import Clock from "./components/Hour"
+import CountTimer from "./components/CountTimer";
 function App() {
   return (
     <div>
-      <Timer/>
       <Clock/>
+      <Timer/>
+      <CountTimer/>
     </div>
   );
 }

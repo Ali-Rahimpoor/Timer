@@ -30,7 +30,7 @@ class Clock extends Component{
    }
    render(){
       return(
-         <div className="mx-auto w-[400px] mt-10 rounded py-8 *:text-2xl bg-slate-700 text-gray-200 text-center">
+         <div className="mx-auto w-[400px] my-8 rounded py-8 *:text-2xl bg-slate-700 text-gray-200 text-center">
             <h1>Hour</h1>
             <h2>{this.state.time}</h2>
          </div>
