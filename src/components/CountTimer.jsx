@@ -4,19 +4,28 @@ const CountTimer = ()=>{
    const [countTime,setCountTime] = useState(0);
    const intervalRef = useRef(null);
    const [isRunning,setIsRunning] = useState(false);
-   
+   //control play sound
+   const hasPlayedSoundRef = useRef(false);
    useEffect(()=>{
       if(!isRunning){
          clearInterval(intervalRef.current);
          return;
       }
+      // reset flag when timer start working!
+      hasPlayedSoundRef.current=false;
+
       const timer = setInterval(()=>{
          setCountTime(prev=>{
             if(prev <=1){
                clearInterval(timer);
                setIsRunning(false);
-               const audio = new Audio(Sound);
-               audio.play();
+               // just play ONE
+               if(!hasPlayedSoundRef.current){
+                  const audio = new Audio(Sound);
+                  audio.play();
+                  hasPlayedSoundRef.current=true;
+               }
+
                return 0;
             }
             return prev -1;
@@ -28,7 +37,9 @@ const CountTimer = ()=>{
       return ()=> clearInterval(timer);
    },[isRunning]);
    const clickStart= ()=>{
+      if(countTime>0){
       setIsRunning(true);
+      }
    }
    const clickStop = ()=>{
       setIsRunning(false);
